@@ -1,0 +1,71 @@
+html {
+  max-width: 720px;
+}
+
+body {
+  background: #fff;
+}
+
+* {
+  color: red;
+}
+.card-dark {
+  background: #b3b3b3;
+}
+
+.input-dark {
+  background: #d6d6d6;
+}
+
+.input-dark[required] {
+  background: #d72b2b;
+}
+
+.input-dark[type='number'] {
+  background: #209f00;
+}
+
+.small-img[alt~='small'] {
+  height: 500px;
+}
+
+button[class|='btn'] {
+  background: #838383;
+}
+
+a[class^='btn'] {
+  background: #fff70f;
+}
+
+a[class*='btn'] {
+  background: #fd2626;
+}
+
+a[class$='big'] {
+  background: #0140ae;
+}
+
+.big::first-letter {
+  color: rgb(221, 247, 28);
+}
+
+.big-text::first-line {
+  color: #209f00;
+}
+
+.input-dark::placeholder {
+  background: #ffffff;
+  color: #fd2626;
+}
+
+.big-text::before,
+.big-text::after {
+  content: ' "$$$" ';
+  color: #000000;
+  background: #fff70f;
+}
+
+/* .big-text::after {
+  content: ' $777$ ';
+  color: #ffffff;
+} */

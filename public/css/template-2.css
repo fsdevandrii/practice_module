@@ -306,7 +306,7 @@
 
 .flex-container {
   display: flex;
-  height: 500px;
+  height: 450px;
 
   flex-direction: row;
   flex-wrap: wrap;

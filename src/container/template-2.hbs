@@ -28,12 +28,9 @@
         </section>
 
         <section class="page_block">
-            <div class="row g-4">
-
+            <div class="flex-container">
                 {{#each preview}}
-                <div class="col-6">
-                    {{> cardPreview data=this}}
-                </div>
+                {{> cardPreview class="flex-item" data=this}}
                 {{/each}}
             </div>
         </section>

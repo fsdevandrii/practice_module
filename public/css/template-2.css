@@ -303,3 +303,28 @@
 .link_item:hover {
   text-decoration: underline;
 }
+
+.flex-container {
+  display: flex;
+  /* height: 900px; */
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+
+  align-items: stretch;
+}
+
+.flex-item {
+  width: 50%;
+  /* margin: 10px; */
+}
+
+/* .flex-item:first-of-type {
+  background-color: #ededed;
+}
+
+.flex-item:last-of-type {
+  background-color: #d4e9ff;
+} */

@@ -318,7 +318,7 @@
 
 .flex-item {
   width: 50%;
-  /* margin: 10px; */
+  margin: 10px;
 }
 
 /* .flex-item:first-of-type {

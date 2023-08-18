@@ -28,6 +28,7 @@
 body {
 font-family: 'Roboto', sans-serif;
 } 
+  
 
 .page {
   background: var(--color-white);
@@ -120,6 +121,8 @@ font-family: 'Roboto', sans-serif;
   margin-bottom: var(--space-l);s
 }
 
+/* ===== Блок Hero ===== */
+
 .hero_title {
   margin-bottom: var(--space-m);
   font-size: 50px;
@@ -157,6 +160,8 @@ font-family: 'Roboto', sans-serif;
   gap: var(--space-l);
 }
 
+/* ====== Button ===== */
+
 .button {
   text-decoration: none;
   color: var(--color-white);
@@ -176,6 +181,9 @@ font-family: 'Roboto', sans-serif;
   background: #218bfd;
   transition-duration: 0.7s;
 }
+
+
+/* ================= */
 
 .preview {
   padding: var(--space-l);

@@ -1,106 +1,65 @@
-<div class="page">
-    <div class="page_content">
+<div class="header">
+    <div class="">
+        {{> logo}}
+    </div>
+    <nav class="header_nav">
+        <div class="header_nav_right">
+            {{> nav list=header }}
+        </div>
 
-        <header class="page_block">
-            <div class="header">
-                <div class="">
-                    {{> logo}}
-                </div>
-                <nav class="header_nav">
-                    <div class="header_nav_right">
-                        {{> nav list=header }}
-                    </div>
+    </nav>
+</div>
+{{!-- Перший блок Hero (Заголовок, текст, картинка) --}}
+{{#with hero}}
+<div class="hero">
+    <div class="hero_content">
+        <h1 class="hero_title">
+            {{title}}
+        </h1>
+        <p class="hero_text">{{text}}</p>
+    </div>
+    <img src="{{photo}}" alt="hero image" class="hero_image">
+</div>
+{{/with}}
 
-                </nav>
-            </div>
-        </header>
+{{!-- Другий блок Blog з трьома картами --}}
+<main class="blog">
+    {{#each blog}}
+    {{!-- Картка у компоненті --}}
+    {{> cardBlog data=this}}
+    {{/each}}
+</main>
 
-        <section class="page_block">
-            <div class="hero">
-
-                {{#with hero}}
-                {{> hero title=title text=text}}
-                <a class="button" href="{{button.url}}">{{button.text}}</a>
-                {{/with}}
-
-            </div>
-
-        </section>
-
-        <section class="page_block">
-            <div class="flex-container">
-                {{#each preview}}
-                {{> cardPreview class="flex-item" data=this}}
-                {{/each}}
-            </div>
-        </section>
-
-        <main class="page_block">
-            <div class="main">
-                <div class="row g-0">
-                    <div class="col-12">
-                        <div class="list_header">
-
-                            <div>
-                                <h2 class="list_title">List of posts</h2>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="category_list">
-                                    {{#each categories}}
-                                    <button class="category_button">{{text}}</button>
-                                    {{/each}}
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-7">
-                        <div class="list">
-                            {{#each news}}
-                            {{> cardPost data=this}}
-                            {{/each}}
-
-                        </div>
-                    </div>
-
-                    <div class="col-5">
-                        <aside class="list_aside">
-
-                            <div class="about">
-                                <h4 class="about_title">About</h4>
-                                <p class="about_text">{{about}}</p>
-                            </div>
-
-                            {{> linkList data=archive title="Archive"}}
-                            {{> linkList data=social title="Social"}}
-                        </aside>
-                    </div>
-
-                </div>
-
-            </div>
-        </main>
-
-        <footer class="page_block">
-            <div class="footer">
-                <div>
-                    {{> logo}}
-                    <span class="footer_copyright">Copyright 2023-2024</span>
-                </div>
-
-                {{#each footer}}
-                <div class="col-3">
-                    <span class="footer_title">{{title}}</span>
-                    {{> nav list=links isVertical=true}}
-                </div>
-                {{/each}}
-
-            </div>
-        </footer>
-
+{{#with form}}
+<div class="form">
+    <div class="form_content">
+        <h3 class="form_title">
+            {{title}}
+        </h3>
+        <p class="form_info">{{info}}</p>
+    </div>
+    <div class="form_action">
+        <a class="form_button" href="{{href}}">{{button}}</a>
     </div>
 </div>
+{{/with}}
+
+
+
+
+<footer class="page_block">
+    <div class="footer">
+        <div>
+            {{> logo}}
+            <span class="footer_copyright">Copyright 2023-2024</span>
+        </div>
+
+        {{#each footer}}
+        <div class="col-3">
+            <span class="footer_title">{{title}}</span>
+            {{> nav list=links isVertical=true}}
+        </div>
+        {{/each}}
+
+    </div>
+</footer>

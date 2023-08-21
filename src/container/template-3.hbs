@@ -18,7 +18,11 @@
         </h1>
         <p class="hero_text">{{text}}</p>
     </div>
-    <img src="{{photo}}" alt="hero image" class="hero_image">
+    <div class="hero_slider">
+        <div class="hero_slider_icon hero_slider_left">{{left}}</div>
+        <img src="{{photo}}" alt="hero image" class="hero_image">
+        <div class="hero_slider_icon hero_slider_right">{{right}}</div>
+    </div>
 </div>
 {{/with}}
 
@@ -46,6 +50,15 @@
 </div>
 {{/with}}
 
+<div class="modal">
+    {{hero.text}} {{hero.text}}
+    <img src="{{hero.photo}}" alt="hero image" class="modal_image">
+    <div class="modal_text">{{hero.text}} {{hero.text}}
+        {{!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit pariatur quae neque voluptatem perferendis
+        sapiente mollitia, vero in ipsa porro esse eos eveniet harum consequuntur ratione possimus? Dolorem, magnam
+        fugiat? --}}
+    </div>
+</div>
 
 
 

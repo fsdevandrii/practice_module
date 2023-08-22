@@ -128,8 +128,14 @@ font-family: 'Roboto', sans-serif;
 
 .main {
   display: flex;
-  gap: var(--gap-m);
   align-items: center;  
+  gap: var(--gap-m);
+}
+
+.main_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
 }
 
 .main_title {
@@ -154,11 +160,6 @@ font-family: 'Roboto', sans-serif;
   border-radius: var(--border-radius);
 }
 
-.main_content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-l);
-}
 
 /* ====== Button ===== */
 

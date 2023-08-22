@@ -11,15 +11,14 @@
 </div>
 
 <main class="main">
-
-    <div class="info_block">
-        {{#with info}}
-        <h1 class="info_title">{{title}}</h1>
-
-        <p class="info_description">{{description}}</p>
-        {{/with}}
+    <div class="main_block">
+        <div class="info_block">
+            {{#with info}}
+            <h1 class="info_title">{{title}}</h1>
+            <p class="info_description">{{description}}</p>
+            {{/with}}
+        </div>
     </div>
-
 
     <form class="form">
 
@@ -52,13 +51,66 @@
 
 </main>
 
-<div class="advantages">
-    {{#each advantages}}
-    <div>
-        <strong>{{title}}</strong>
-        <p>{{text}}</p>
+{{#with updates}}
+<div class="updates">
+    <h1 class="updates_title">{{title}}</h1>
+
+    {{#each list}}
+    <div class="upd">
+
+        <div class="upd_col_1">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M32 0H0V32H32V0Z" fill="#007BFF" />
+            </svg>
+
+            {{!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M32 0H0V32H32V0Z" fill="#E83E8C" />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M32 0H0V32H32V0Z" fill="#6F42C1" />
+            </svg> --}}
+
+        </div>
+
+
+        <div class="upd_col_2">
+            <strong class="upd_nickname">{{nickname}}</strong>
+            <p class="upd_description">{{description}}</p>
+        </div>
     </div>
     {{/each}}
+
+    <a href="{{show_all.url}}" class="messages_link">{{show_all.text}}</a>
+</div>
+{{/with}}
+
+
+<div class="expirience">
+
+    {{#with expirience}}
+    <div class="expirience_title">{{title}}</div>
+    <div class="exp_badge">{{badge}}</div>
+
+    <div class="all_feedback">
+
+        {{#each list}}
+        <div class="feedback">
+            <div class="feedback_name">{{name}}</div>
+            <div class="feedback_details">{{details}}</div>
+        </div>
+        {{/each}}
+
+    </div>
+
+
+
+
+
+    {{/with}}
+
+
 </div>
 
 

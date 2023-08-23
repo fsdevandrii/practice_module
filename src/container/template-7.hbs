@@ -50,50 +50,45 @@
         {{/with}}
     </div>
 
-    <div class="articles">
-
+    <div class="articles_head">
         <div class="artic_one">
-
             <div class="our">
                 Our Articles
             </div>
 
             <a class="btn_view" href="#">View All</a>
-            {{!-- <button class="view">
-                View All
-            </button> --}}
         </div>
+    </div>
 
+    <div class="articles">
 
-        <div class="all_articles_card">
-
-            <div class="card">
-                {{#each articles}}
-                <div class="articles_card">
-                    <div class="articles_photo">
-                        <img class="art_pht" src="{{photo}}" alt="photo">
-                    </div>
-                    {{#if isNew}}
-                    <div class="bage_new">
-                        {{isNew}}
-                    </div>
-                    {{/if}}
-
-                    <div class="articles_name">
-                        {{name}}
-                    </div>
-
-                    <div class="articles_description">
-                        {{description}}
-                    </div>
-                    <a class="btn_articles" href="#">Read All</a>
-                    {{!-- <button class="btn_articles">Read All</button> --}}
-
+        <div class="card">
+            {{#each articles}}
+            <div class="articles_card">
+                <div class="articles_photo">
+                    <img class="art_pht" src="{{photo}}" alt="photo">
                 </div>
-                {{/each}}
-            </div>
+                {{#if isNew}}
+                <div class="bage_new">
+                    {{isNew}}
+                </div>
+                {{/if}}
 
+                <div class="articles_name">
+                    {{name}}
+                </div>
+
+                <div class="articles_description">
+                    {{description}}
+                </div>
+                <a class="btn_articles" href="#">Read All</a>
+                {{!-- <button class="btn_articles">Read All</button> --}}
+
+            </div>
+            {{/each}}
         </div>
+
+
 
     </div>
 
@@ -110,7 +105,6 @@
         <a class="pages_link" href="{{path}}">{{name}}</a>
         {{/each}}
     </div>
-
     <div class="footer_copyright">
         {{copyright}}
     </div>

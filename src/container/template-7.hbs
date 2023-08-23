@@ -1,112 +1,23 @@
-<div class="header">
-    {{#with header}}
-    <div class="header_1">
-        {{> logo}}
-        <div class="header_nav">
-            {{#each links}}
-            <a class="header_item" href="{{url}}">{{text}}</a>
-            {{/each}}
-        </div>
-    </div>
-
-    <div class="header_2">
-        <div class="hd_2_start">
-            {{> logo_2}}
-            <a class="hd_2_title" href="{{ad.url}}">{{ad.text}}</a>
-        </div>
-
-        <div class="user_count">
-            Users online: {{userOnline}}
-        </div>
-    </div>
-    {{/with}}
-</div>
+{{> headerDark}}
 
 <main class="main">
 
-    <div class="hero">
-        {{#with hero}}
-        <div class="hero_title">
-            {{title}}
-        </div>
-        <p class="hero_text">
-            {{description}}
-        </p>
-        <a class="button_hero" href="{{button.url}}">{{button.text}}</a>
-        {{!-- <button href="{{button.url}}" class="button_hero">
-            {{button.text}} --}}
-        </button>
-        {{/with}}
-    </div>
+    {{> heroBlockDark}}
 
-    <div class="about">
-        {{#with about}}
-        <div class="about_heading">
-            {{heading}}
-        </div>
-        <p class="about_info">
-            {{info}}
-        </p>
-        {{/with}}
-    </div>
+    {{> aboutBlockDark}}
 
     <div class="articles_head">
         <div class="artic_one">
             <div class="our">
                 Our Articles
             </div>
-
             <a class="btn_view" href="#">View All</a>
         </div>
     </div>
 
     <div class="articles">
-
-        <div class="card">
-            {{#each articles}}
-            <div class="articles_card">
-                <div class="articles_photo">
-                    <img class="art_pht" src="{{photo}}" alt="photo">
-                </div>
-                {{#if isNew}}
-                <div class="bage_new">
-                    {{isNew}}
-                </div>
-                {{/if}}
-
-                <div class="articles_name">
-                    {{name}}
-                </div>
-
-                <div class="articles_description">
-                    {{description}}
-                </div>
-                <a class="btn_articles" href="#">Read All</a>
-                {{!-- <button class="btn_articles">Read All</button> --}}
-
-            </div>
-            {{/each}}
-        </div>
-
-
-
+        {{> articleCardDark}}
     </div>
-
-
 </main>
 
-
-
-
-{{#with footer}}
-<footer class="footer">
-    <div class="f_pages">
-        {{#each pages}}
-        <a class="pages_link" href="{{path}}">{{name}}</a>
-        {{/each}}
-    </div>
-    <div class="footer_copyright">
-        {{copyright}}
-    </div>
-</footer>
-{{/with}}
+{{> footerDark}}

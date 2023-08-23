@@ -229,10 +229,8 @@ border-radius: 4px;
 .main {
   display: flex;
   flex-direction: column;
-  /* width: 100%; */
+  
   gap: 60px;
-
-  /* align-items: flex-start; */
 }
 
 .hero {
@@ -373,10 +371,11 @@ border-radius: 4px;
 
 .articles {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
   gap: 32px;
   align-self: stretch;
+
+  margin-bottom: 60px;
 }
 
 .articles_card {

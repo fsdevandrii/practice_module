@@ -1,134 +1,112 @@
 <div class="header">
-    <div class="">
+    {{#with header}}
+    <div class="header_1">
         {{> logo}}
+        <div class="header_nav">
+            {{#each links}}
+            <a class="header_item" href="{{url}}">{{text}}</a>
+            {{/each}}
+        </div>
     </div>
-    <nav class="header_nav">
-        <div class="header_nav_right">
-            {{> nav list=header }}
+
+    <div class="header_2">
+        <div class="hd_2_start">
+            {{> logo_2}}
+            <a class="hd_2_title" href="{{ad.url}}">{{ad.text}}</a>
         </div>
 
-    </nav>
+        <div class="user_count">
+            Users online: {{userOnline}}
+        </div>
+    </div>
+    {{/with}}
 </div>
 
 <main class="main">
-    <div class="main_block">
-        <div class="info_block">
-            {{#with info}}
-            <h1 class="info_title">{{title}}</h1>
-            <p class="info_description">{{description}}</p>
-            {{/with}}
+
+    <div class="hero">
+        {{#with hero}}
+        <div class="hero_title">
+            {{title}}
+        </div>
+        <p class="hero_text">
+            {{description}}
+        </p>
+        <a class="button_hero" href="{{button.url}}">{{button.text}}</a>
+        {{!-- <button href="{{button.url}}" class="button_hero">
+            {{button.text}} --}}
+        </button>
+        {{/with}}
+    </div>
+
+    <div class="about">
+        {{#with about}}
+        <div class="about_heading">
+            {{heading}}
+        </div>
+        <p class="about_info">
+            {{info}}
+        </p>
+        {{/with}}
+    </div>
+
+    <div class="articles_head">
+        <div class="artic_one">
+            <div class="our">
+                Our Articles
+            </div>
+
+            <a class="btn_view" href="#">View All</a>
         </div>
     </div>
 
-    <form class="form">
+    <div class="articles">
 
-        {{#with form}}
-        <h2 class="form_title">{{title}}</h2>
+        <div class="card">
+            {{#each articles}}
+            <div class="articles_card">
+                <div class="articles_photo">
+                    <img class="art_pht" src="{{photo}}" alt="photo">
+                </div>
+                {{#if isNew}}
+                <div class="bage_new">
+                    {{isNew}}
+                </div>
+                {{/if}}
 
-        <div class="form_input_list">
-            {{#each inputs}}
-            <input type="{{type}}" placeholder="{{placeholder}}" class="form_input" name="{{name}}"
-                id="form-input-{{id}}" />
+                <div class="articles_name">
+                    {{name}}
+                </div>
+
+                <div class="articles_description">
+                    {{description}}
+                </div>
+                <a class="btn_articles" href="#">Read All</a>
+                {{!-- <button class="btn_articles">Read All</button> --}}
+
+            </div>
             {{/each}}
-
         </div>
 
-        <div class="form_checkbox">
-            <div></div>
-            {{#with checkbox}}
-            <input type="checkbox" name="{{name}}" id="{{name}}">
-            <label for="{{name}}">{{label}}</label>
-            {{/with}}
-        </div>
 
-        <button type="submit" class="form_button">{{button}}</button>
-        <div>
-            <hr class="form_line">
-        </div>
-        <p class="form_info">{{info}}</p>
-        {{/with}}
-    </form>
+
+    </div>
+
 
 </main>
 
-{{#with updates}}
-<div class="updates">
-    <h1 class="updates_title">{{title}}</h1>
-
-    {{#each list}}
-    <div class="upd">
-
-        <div class="upd_col_1">
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <path d="M32 0H0V32H32V0Z" fill="#007BFF" />
-            </svg>
-
-            {{!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <path d="M32 0H0V32H32V0Z" fill="#E83E8C" />
-            </svg>
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <path d="M32 0H0V32H32V0Z" fill="#6F42C1" />
-            </svg> --}}
-
-        </div>
 
 
-        <div class="upd_col_2">
-            <strong class="upd_nickname">{{nickname}}</strong>
-            <p class="upd_description">{{description}}</p>
-        </div>
-    </div>
-    {{/each}}
 
-    <a href="{{show_all.url}}" class="messages_link">{{show_all.text}}</a>
-</div>
-{{/with}}
-
-
-<div class="expirience">
-
-    {{#with expirience}}
-    <div class="expirience_title">{{title}}</div>
-    <div class="exp_badge">{{badge}}</div>
-
-    <div class="all_feedback">
-
-        {{#each list}}
-        <div class="feedback">
-            <div class="feedback_name">{{name}}</div>
-            <div class="feedback_details">{{details}}</div>
-        </div>
+{{#with footer}}
+<footer class="footer">
+    <div class="f_pages">
+        {{#each pages}}
+        <a class="pages_link" href="{{path}}">{{name}}</a>
         {{/each}}
-
     </div>
-
-
-
-
-
-    {{/with}}
-
-
-</div>
-
-
-
-
-<footer class="page_block">
-    <div class="footer">
-        <div>
-            {{> logo}}
-            <span class="footer_copyright">Copyright 2023-2024</span>
-        </div>
-
-        {{#each footer}}
-        <div class="col-3">
-            <span class="footer_title">{{title}}</span>
-            {{> nav list=links isVertical=true}}
-        </div>
-        {{/each}}
-
+    <div class="footer_copyright">
+        {{copyright}}
     </div>
 </footer>
+{{/with}}

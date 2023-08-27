@@ -9,22 +9,26 @@
 
     </nav>
 </div>
+
 {{!-- Перший блок Hero (Заголовок, текст, картинка) --}}
-{{#with hero}}
-<div class="hero">
-    <div class="hero_content">
-        <h1 class="hero_title">
-            {{title}}
-        </h1>
-        <p class="hero_text">{{text}}</p>
+<div class="hero_container">
+    {{#with hero}}
+    <div class="hero">
+        <div class="hero_content">
+            <h1 class="hero_title">
+                {{title}}
+            </h1>
+            <p class="hero_text">{{text}}</p>
+        </div>
+        <div class="hero_slider">
+            <div class="hero_slider_icon hero_slider_left">{{left}}</div>
+            <img src="{{photo}}" alt="hero image" class="hero_image">
+            <div class="hero_slider_icon hero_slider_right">{{right}}</div>
+        </div>
     </div>
-    <div class="hero_slider">
-        <div class="hero_slider_icon hero_slider_left">{{left}}</div>
-        <img src="{{photo}}" alt="hero image" class="hero_image">
-        <div class="hero_slider_icon hero_slider_right">{{right}}</div>
-    </div>
+    {{/with}}
+
 </div>
-{{/with}}
 
 {{!-- Другий блок Blog з трьома картами --}}
 <main class="blog">

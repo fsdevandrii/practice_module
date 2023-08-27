@@ -52,16 +52,21 @@
         {{/with}}
     </form>
 
-</main>
 
-<div class="advantages">
-    {{#each advantages}}
-    <div>
-        <strong>{{title}}</strong>
-        <p>{{text}}</p>
-    </div>
-    {{/each}}
-</div>
+
+    {{!-- <div class="advantages"> --}}
+
+        {{#each advantages}}
+        <div class="advantage">
+            <strong>{{title}}</strong>
+            <p>{{text}}</p>
+        </div>
+        {{/each}}
+        {{!--
+    </div> --}}
+
+
+</main>
 
 
 

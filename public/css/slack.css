@@ -337,6 +337,8 @@ body {
     font-weight: 700;
     line-height: 38px;
     letter-spacing: -0.3px;
+
+    text-underline-position: under;
   }
 
   .explore_card {
